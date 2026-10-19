@@ -156,24 +156,21 @@
   padding: 2px;
   cursor: pointer;
   background: transparent;
-  transition: border-color var(--transition-fast), opacity 0.2s ease;
+  transition: border-color var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  opacity: 0.7;
 }
 
 .info__colorThumbBtn:hover {
   border-color: var(--text-muted);
-  opacity: 1;
 }
 
 .info__colorThumbBtn--active {
   border-color: var(--text-primary);
   border-width: 2px;
   padding: 1px;
-  opacity: 1;
 }
 
 .info__colorThumbWrapper {
