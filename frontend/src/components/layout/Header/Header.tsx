@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { navLinks } from "@/lib/data";
 import { Search, ChevronDown, X, Heart, User, ShoppingCart, LogOut, Package, LayoutDashboard } from "lucide-react";
 import { useCart } from "@/context/CartContext";
@@ -18,6 +18,7 @@ export default function Header() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const profileRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const router = useRouter();
   const { openCart, totalItems } = useCart();
   const { user, isAuthenticated, logout } = useAuth();
   const { wishlistIds } = useWishlist();
@@ -202,12 +203,20 @@ export default function Header() {
             type="button"
             className={`${styles.header__iconLink} ${styles.header__cartBtn}`}
             aria-label="Shopping cart"
-            onClick={openCart}
+            onClick={() => {
+              if (!isAuthenticated) {
+                router.push("/account/login");
+              } else {
+                openCart();
+              }
+            }}
           >
             <ShoppingCart size={20} strokeWidth={2} />
-            <span className={styles.header__cartBadge}>
-              {totalItems > 0 && totalItems}
-            </span>
+            {totalItems > 0 && (
+              <span className={styles.header__cartBadge}>
+                {totalItems}
+              </span>
+            )}
           </button>
 
 
@@ -323,7 +332,14 @@ export default function Header() {
           <button
             type="button"
             className={styles.mobileMenu__footerLink}
-            onClick={() => { closeMobileMenu(); openCart(); }}
+            onClick={() => {
+              closeMobileMenu();
+              if (!isAuthenticated) {
+                router.push("/account/login");
+              } else {
+                openCart();
+              }
+            }}
           >
             <ShoppingCart size={17} strokeWidth={2} />
             <span>Cart</span>

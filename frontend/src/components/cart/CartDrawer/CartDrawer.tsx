@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { X, Loader2 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { useAuth } from "@/context/AuthContext";
 import { toast } from "sonner";
 import styles from "./CartDrawer.module.css";
 
 export default function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, updateQuantity, totalItems, subtotal, isLoading } = useCart();
+  const { isAuthenticated } = useAuth();
 
   return (
     <>
@@ -33,7 +35,15 @@ export default function CartDrawer() {
           </button>
         </div>
 
-        {isLoading && items.length === 0 ? (
+        {!isAuthenticated ? (
+          <div className={styles.drawer__empty}>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <p className={styles.drawer__emptyText}>Sign in to view your bag</p>
+            <Link href="/account/login" className={styles.drawer__shopBtn} onClick={closeCart}>
+              Sign In to Account
+            </Link>
+          </div>
+        ) : isLoading && items.length === 0 ? (
           <div className={styles.drawer__empty}>
             <Loader2 size={28} className={styles.drawer__loader} />
             <p className={styles.drawer__emptyText}>Loading bag...</p>

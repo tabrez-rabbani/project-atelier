@@ -32,7 +32,7 @@ A full-stack, enterprise-grade luxury fashion e-commerce platform built with Nex
 Maison Atelier is designed with a modern decoupled architecture. The repository is organized as a monorepo containing both the backend REST API service and the frontend client application.
 
 - **Storefront / Client Application**: Hosted on `maison.tabrezrabbani.in`
-- **Backend API Service**: Hosted on `api.tabrezrabbani.in`
+- **Backend API Service**: Hosted on `api-maison.tabrezrabbani.in`
 
 Both services share the primary domain namespace, allowing seamless cross-origin communication, HTTP-only cookie-based authentication, and localized session persistence.
 
@@ -59,7 +59,7 @@ Both services share the primary domain namespace, allowing seamless cross-origin
                                       v
                     +-----------------+------------------+
                     |        Express Backend API         |
-                    |      (api.tabrezrabbani.in)        |
+                    |      (api-maison.tabrezrabbani.in)        |
                     +----+------------+------------+-----+
                          |            |            |
                          v            v            v
@@ -274,7 +274,7 @@ project-atelier/
 
 | Variable | Description | Example / Default |
 | :--- | :--- | :--- |
-| `NEXT_PUBLIC_API_URL` | Base endpoint of the backend REST API | `https://api.tabrezrabbani.in/api` |
+| `NEXT_PUBLIC_API_URL` | Base endpoint of the backend REST API | `https://api-maison.tabrezrabbani.in/api` |
 
 ---
 
@@ -333,13 +333,13 @@ All backend routes are prefixed with `/api`.
 
 - **Frontend**: Deployed to [Vercel](https://vercel.com)
   - Set root directory to `frontend`.
-  - Add environment variable `NEXT_PUBLIC_API_URL=https://api.tabrezrabbani.in/api`.
+  - Add environment variable `NEXT_PUBLIC_API_URL=https://api-maison.tabrezrabbani.in/api`.
   - Assign custom domain `maison.tabrezrabbani.in`.
 - **Backend**: Deployed to [Railway](https://railway.app) or [Render](https://render.com)
   - Set root directory to `backend`.
   - Set start command to `npm start`.
   - Add all required environment variables from the table above.
-  - Assign custom domain `api.tabrezrabbani.in`.
+  - Assign custom domain `api-maison.tabrezrabbani.in`.
 - **Database**: [MongoDB Atlas](https://www.mongodb.com/atlas)
   - Whitelist cloud hosting outbound IPs (`0.0.0.0/0` under Network Access).
 - **DNS Configuration**:

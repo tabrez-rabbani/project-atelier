@@ -105,8 +105,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
     if (isAuthenticated) {
       refreshCart();
-    } else if (prevAuthRef.current && !isAuthenticated) {
-      clearCart();
+    } else {
+      setIsLoading(false);
+      if (prevAuthRef.current && !isAuthenticated) {
+        clearCart();
+      }
     }
 
     prevAuthRef.current = isAuthenticated;
