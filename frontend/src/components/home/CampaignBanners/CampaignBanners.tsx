@@ -48,7 +48,7 @@ const campaigns: Campaign[] = [
 
 export default function CampaignBanners() {
   return (
-    <section className={`section ${styles.campaigns}`} aria-label="Current Campaigns">
+    <section className={styles.campaigns} aria-label="Current Campaigns">
       <div className="container">
         <div className={styles.campaigns__grid}>
           {campaigns.map((campaign) => (

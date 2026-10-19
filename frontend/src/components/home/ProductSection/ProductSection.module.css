@@ -1,6 +1,6 @@
 .products {
   background-color: var(--background);
-  padding-top: var(--space-lg);
+  padding-top: 12px !important;
   padding-bottom: var(--space-xl);
 }
 
@@ -65,7 +65,7 @@
 
 @media (max-width: 767px) {
   .products {
-    padding-top: var(--space-md);
+    padding-top: 8px !important;
     padding-bottom: var(--space-lg);
   }
 

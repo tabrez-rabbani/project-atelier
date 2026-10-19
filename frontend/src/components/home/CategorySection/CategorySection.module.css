@@ -1,7 +1,7 @@
 .category {
   background-color: var(--background);
   padding-top: var(--space-3xl);
-  padding-bottom: var(--space-lg);
+  padding-bottom: 0 !important;
 }
 
 .category :global(.container) {
@@ -134,6 +134,10 @@
 }
 
 @media (max-width: 767px) {
+  .category {
+    padding-bottom: 0 !important;
+  }
+
   .category :global(.container) {
     padding-left: var(--space-md);
     padding-right: 0;

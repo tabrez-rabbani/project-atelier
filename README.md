@@ -2,17 +2,22 @@
 
 A full-stack, enterprise-grade luxury fashion e-commerce platform built with Next.js 16 (App Router), React 19, Node.js, Express, and MongoDB. The system features a high-performance storefront, a comprehensive administrative management dashboard, role-based access control, cryptographic payment verification via Razorpay, cloud asset storage via ImageKit, and Google OAuth 2.0 authentication.
 
+**Live Demo**: [maison.tabrezrabbani.in](https://maison.tabrezrabbani.in) | **API Base**: [api-maison.tabrezrabbani.in](https://api-maison.tabrezrabbani.in)
+
 ---
 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Screenshots](#screenshots)
+  - [Storefront Views](#storefront-views)
+  - [Administrative Dashboard](#administrative-dashboard)
 - [System Architecture](#system-architecture)
 - [Tech Stack](#tech-stack)
 - [Repository Structure](#repository-structure)
 - [Key Features](#key-features)
-  - [Storefront](#storefront)
-  - [Administrative Dashboard](#administrative-dashboard)
+  - [Storefront Features](#storefront-features)
+  - [Administrative Operations](#administrative-operations)
   - [Security and Resilience](#security-and-resilience)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -31,10 +36,42 @@ A full-stack, enterprise-grade luxury fashion e-commerce platform built with Nex
 
 Maison Atelier is designed with a modern decoupled architecture. The repository is organized as a monorepo containing both the backend REST API service and the frontend client application.
 
-- **Storefront / Client Application**: Hosted on `maison.tabrezrabbani.in`
-- **Backend API Service**: Hosted on `api-maison.tabrezrabbani.in`
+- **Storefront / Client Application**: Hosted on [maison.tabrezrabbani.in](https://maison.tabrezrabbani.in)
+- **Backend API Service**: Hosted on [api-maison.tabrezrabbani.in](https://api-maison.tabrezrabbani.in)
 
 Both services share the primary domain namespace, allowing seamless cross-origin communication, HTTP-only cookie-based authentication, and localized session persistence.
+
+---
+
+## Screenshots
+
+### Storefront Views
+
+#### Homepage Showcase
+![Homepage](docs/screenshots/homepage.png)
+
+#### Catalog and New Arrivals
+| Collection View | New In Showcase |
+| :---: | :---: |
+| ![Catalog](docs/screenshots/collection.png) | ![New In](docs/screenshots/new_in.png) |
+
+#### Product Experience and Shopping Bag
+| Product Detail Page | Slide-out Cart Drawer |
+| :---: | :---: |
+| ![Product Detail](docs/screenshots/product-detail.png) | ![Cart Drawer](docs/screenshots/cart.png) |
+
+#### Bag Summary and Authentication
+| Dedicated Bag View | Sign In and Authentication |
+| :---: | :---: |
+| ![Bag View](docs/screenshots/cart2.png) | ![Sign In](docs/screenshots/login.png) |
+
+### Administrative Dashboard
+
+#### Analytics and Performance Overview
+![Admin Analytics Dashboard](docs/screenshots/admin.png)
+
+#### Inventory and Product Management
+![Product Management Table](docs/screenshots/products_list.png)
 
 ---
 
@@ -137,7 +174,7 @@ project-atelier/
 
 ## Key Features
 
-### Storefront
+### Storefront Features
 - **Responsive Layout**: Designed for mobile, tablet, and ultra-wide screens.
 - **Dynamic Catalog**: Category browsing, brand filtering, sorting by price and date, and instant search.
 - **Product Experience**: Multi-image galleries, sizing guides, stock status indicators, and related product recommendations.
@@ -146,7 +183,7 @@ project-atelier/
 - **Seamless Checkout**: Address management, Cash on Delivery, and Razorpay online payments with signature verification.
 - **Customer Account**: Profile management, order history tracking, delivery status updates, and cancellation requests.
 
-### Administrative Dashboard
+### Administrative Operations
 - **Analytics Overview**: Live revenue metrics, monthly growth, order distribution charts, and low-stock alerts.
 - **Product Management**: Full CRUD operations, multi-image upload via ImageKit, color and size variants, pricing, and category assignment.
 - **Category Management**: Category hierarchy creation, slug generation, and cover image configuration.

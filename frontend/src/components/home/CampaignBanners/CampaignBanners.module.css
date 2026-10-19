@@ -1,7 +1,7 @@
 .campaigns {
   background-color: var(--background);
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-4xl);
+  padding-top: 16px;
+  padding-bottom: 24px;
 }
 
 .campaigns__grid {
@@ -163,7 +163,8 @@
 
 @media (max-width: 767px) {
   .campaigns {
-    padding-block: var(--space-lg);
+    padding-top: 6px;
+    padding-bottom: 12px;
   }
 
   .campaigns__grid {
