@@ -1,0 +1,3 @@
+.placeholder {
+  min-height: var(--lazy-min-height, 400px);
+}

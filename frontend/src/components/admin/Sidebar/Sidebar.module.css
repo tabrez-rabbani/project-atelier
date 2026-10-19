@@ -1,0 +1,245 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #02a9f7;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-family: var(--font-body), sans-serif;
+  z-index: 1000;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 21px 0 rgba(206, 207, 207, 0.593);
+}
+
+.sidebar--open {
+  transform: translateX(0);
+}
+
+.sidebar--closed {
+  transform: translateX(-300px);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-300px);
+    box-shadow: none;
+  }
+
+  .sidebar.sidebar--open {
+    transform: translateX(0);
+    box-shadow: 0 0 21px 0 rgba(206, 207, 207, 0.593);
+  }
+
+  .sidebar.sidebar--closed {
+    transform: translateX(-300px);
+  }
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__logo {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.sidebar__toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  position: relative;
+}
+
+.hamburgerLine {
+  display: block;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              width 0.3s ease;
+}
+
+.hamburgerLine:nth-child(1) { width: 22px; }
+.hamburgerLine:nth-child(2) { width: 16px; }
+.hamburgerLine:nth-child(3) { width: 10px; }
+
+.sidebar__nav {
+  flex: 1;
+  padding: 24px 16px;
+  overflow-y: auto;
+}
+
+.sidebar__nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar__nav::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.sidebar__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Ensure no global a:hover styles override sidebar text color */
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active,
+.sidebar a:visited {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.sidebar__link,
+.sidebar__link:hover,
+.sidebar__link:focus,
+.sidebar__link:active,
+.sidebar__link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: none;
+}
+
+.sidebar__linkInner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff !important;
+}
+
+.sidebar__linkInner span,
+.sidebar__linkInner svg {
+  color: #ffffff !important;
+}
+
+.sidebar__link:hover {
+  background-color: transparent;
+  color: #ffffff !important;
+}
+
+.sidebar__link--active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.sidebar__link--open {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+}
+
+.sidebar__chevron {
+  transition: transform 0.2s ease;
+  color: #ffffff !important;
+}
+
+.sidebar__chevron--open {
+  transform: rotate(180deg);
+}
+
+/* Submenu Styles */
+.sidebar__submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.sidebar__submenu--open {
+  max-height: 250px;
+}
+
+.sidebar__subList {
+  list-style: none;
+  padding: 8px 0 8px 36px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar__subLink,
+.sidebar__subLink:visited {
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 4px 0;
+}
+
+.sidebar__subLink:hover {
+  color: #ffffff !important;
+}
+
+.sidebar__subLink--active {
+  color: #ffffff !important;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.sidebar__footer {
+  padding: 24px;
+}
+
+.sidebar__logout {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: #4da3ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar__logout:hover {
+  opacity: 0.9;
+}

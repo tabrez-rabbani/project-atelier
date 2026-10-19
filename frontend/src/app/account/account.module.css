@@ -1,0 +1,1304 @@
+.accountPageWrapper {
+  min-height: 85vh;
+  background-color: #f4f6f8;
+  padding: 40px 0 80px 0;
+}
+
+.accountContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.accountLayout {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.accountSidebar {
+  width: 400px;
+  min-width: 380px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 100px;
+}
+
+.sidebarCover {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background-color: #3b82f6;
+}
+
+.sidebarCoverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.sidebarProfileInfo {
+  position: relative;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+
+.sidebarAvatarWrapper {
+  width: 90px;
+  height: 90px;
+  margin: -45px auto 12px auto;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #02a9f7 0%, #0284c7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sidebarAvatarInitial {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1;
+  user-select: none;
+}
+
+.sidebarUserName {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.sidebarUserEmail {
+  font-size: 13px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+.sidebarNav {
+  margin-top: 12px;
+  padding-bottom: 8px;
+}
+
+.sidebarNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarNavItem {
+  width: 100%;
+}
+
+.sidebarNavLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #475569;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.sidebarNavLink:hover {
+  background-color: #f8fafc;
+  color: #02a9f7;
+}
+
+.sidebarNavLinkActive {
+  background-color: #0da4861c;
+  color: #02a9f7;
+  border-left: 3px solid #02a9f7;
+  font-weight: 700;
+}
+
+.sidebarLogoutArea {
+  padding: 16px 20px 24px 20px;
+}
+
+.sidebarLogoutBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #02a9f7;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.sidebarLogoutBtn:hover {
+  background-color: #2e8644;
+}
+
+.mainContent {
+  flex: 1;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  min-height: 520px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.sectionHeaderTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 4px solid #02a9f7;
+  padding-left: 12px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sectionSubtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: -6px 0 24px 16px;
+}
+
+.dashboardGreeting {
+  margin-bottom: 24px;
+}
+
+.dashboardGreeting h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #334155;
+  margin: 0 0 8px 0;
+  line-height: 1.6;
+}
+
+.dashboardGreeting h4 span {
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.dashboardGreetingDesc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.statBox {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statBox:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.statIconWrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cartStatIcon {
+  color: #02a9f7;
+}
+
+.orderStatIcon {
+  color: #02a9f7;
+}
+
+.statInfo h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.statInfo h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.dashInfoCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.dashInfoCardMt {
+  margin-top: 20px;
+}
+
+.dashInfoCardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 3px solid #02a9f7;
+  padding-left: 10px;
+  margin: 0 0 18px 0;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.infoRow:last-child {
+  margin-bottom: 0;
+}
+
+.infoLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: #475569;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.infoValue {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0f172a;
+  word-break: break-word;
+}
+
+.editBtnIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 6px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.editBtnIcon:hover {
+  background-color: #eff6ff;
+}
+
+.userInfoForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formSectionHeading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 20px 0 12px 0;
+}
+
+.formInput {
+  width: 100%;
+  height: 48px;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1e293b;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formInput:focus {
+  border-color: #02a9f7;
+  box-shadow: 0 0 0 3px rgba(2, 169, 247, 0.15);
+}
+
+.formInput:disabled {
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+  color: #64748b;
+}
+
+.formGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.passwordInputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.eyeToggleBtn {
+  position: absolute;
+  right: 14px;
+  top: 24px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveInfoBtn {
+  margin-top: 16px;
+  padding: 14px 28px;
+  background-color: #2e8644;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  transition: background-color 0.2s ease;
+}
+
+.saveInfoBtn:hover {
+  background-color: #65a30d;
+}
+
+.saveInfoBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ordersTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.ordersTable thead tr {
+  background-color: #02a9f7;
+  color: #ffffff;
+}
+
+.ordersTable th {
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ordersTable td {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #334155;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.ordersTable tr:last-child td {
+  border-bottom: none;
+}
+
+.orderStatusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statusPlaced {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.statusDelivered {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.statusProcessing {
+  background-color: #fefce8;
+  color: #a16207;
+  border: 1px solid #fef08a;
+}
+
+.statusCancelled {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.viewOrderBtn {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.viewOrderBtn:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.noOrdersMessage {
+  padding: 40px 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.orderDetailCard {
+  margin-top: 16px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.orderDetailHeading {
+  margin: 0 0 12px 0;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.orderItemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.orderItemRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.orderItemRow:last-child {
+  border-bottom: none;
+}
+
+.orderItemThumb {
+  position: relative;
+  width: 50px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.orderItemThumbImg {
+  object-fit: cover;
+}
+
+.orderItemInfo {
+  flex: 1;
+}
+
+.orderItemTitle {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.orderItemMeta {
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.orderItemTotal {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.orderDetailShipping {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #cbd5e1;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.orderDetailTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.orderDetailDate {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.trackingTimeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 8px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  position: relative;
+}
+
+.trackingStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  gap: 8px;
+}
+
+.trackingDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f5f9;
+  border: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.trackingStepActive .trackingDot {
+  background-color: #eff6ff;
+  border-color: #02a9f7;
+  box-shadow: 0 0 0 4px rgba(2, 169, 247, 0.12);
+}
+
+.trackingStepCompleted .trackingDot {
+  background-color: #e0f2fe;
+  border-color: #02a9f7;
+}
+
+.trackingLine {
+  position: absolute;
+  top: 20px;
+  left: calc(50% + 22px);
+  width: calc(100% - 44px);
+  height: 2px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+.trackingLineCompleted {
+  background-color: #02a9f7;
+}
+
+.trackingLabel {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+}
+
+.trackingStepActive .trackingLabel {
+  color: #02a9f7;
+  font-weight: 600;
+}
+
+.trackingStepCompleted .trackingLabel {
+  color: #0284c7;
+  font-weight: 600;
+}
+
+.cancelledBanner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.orderSummaryRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.orderSummaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.orderSummaryLabel {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orderSummaryValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.orderSummaryTotal {
+  color: #02a9f7;
+}
+
+.cancelOrderArea {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cancelOrderBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cancelOrderBtn:hover:not(:disabled) {
+  background-color: #fee2e2;
+  border-color: #f87171;
+}
+
+.cancelOrderBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelOrderHint {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@keyframes accountShimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+
+.skeletonLine,
+.skeletonCover,
+.skeletonAvatar,
+.skeletonIconBox {
+  background: linear-gradient(
+    90deg,
+    #f1f5f9 0%,
+    #e2e8f0 50%,
+    #f1f5f9 100%
+  );
+  background-size: 1600px 100%;
+  animation: accountShimmer 1.8s ease-in-out infinite;
+}
+
+.skeletonCover {
+  width: 100%;
+  height: 140px;
+}
+
+.skeletonAvatar {
+  width: 90px;
+  height: 90px;
+  margin: -45px auto 12px auto;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.skeletonLine {
+  border-radius: 6px;
+}
+
+.skeletonIconBox {
+  border-radius: 10px;
+}
+
+.skeletonName {
+  width: 130px;
+  height: 20px;
+  margin: 10px auto 6px;
+}
+
+.skeletonEmail {
+  width: 170px;
+  height: 14px;
+  margin: 0 auto;
+}
+
+.skeletonNavGroup {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeletonNavItem {
+  width: 100%;
+  height: 46px;
+  border-radius: 8px;
+}
+
+.skeletonLogout {
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+}
+
+.skeletonPageTitle {
+  width: 180px;
+  height: 28px;
+  margin-bottom: 20px;
+}
+
+.skeletonGreetingWrap {
+  margin-bottom: 28px;
+}
+
+.skeletonGreetingTitle {
+  width: 160px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.skeletonGreetingText {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 8px;
+}
+
+.skeletonGreetingSubtext {
+  width: 70%;
+  height: 14px;
+}
+
+.skeletonStatIcon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.skeletonStatInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeletonStatLabel {
+  width: 80px;
+  height: 14px;
+}
+
+.skeletonStatValue {
+  width: 40px;
+  height: 24px;
+}
+
+.skeletonCardTitle {
+  width: 160px;
+  height: 20px;
+  margin-bottom: 18px;
+}
+
+.skeletonCardTitleSm {
+  width: 140px;
+  height: 20px;
+  margin-bottom: 18px;
+}
+
+.skeletonCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skeletonLine60 {
+  width: 60%;
+  height: 16px;
+}
+
+.skeletonLine50 {
+  width: 50%;
+  height: 16px;
+}
+
+.skeletonLine75 {
+  width: 75%;
+  height: 16px;
+}
+
+.skeletonLine65 {
+  width: 65%;
+  height: 16px;
+}
+
+.skeletonLine45 {
+  width: 45%;
+  height: 16px;
+}
+
+.skeletonTableRow td {
+  padding: 16px 14px;
+}
+
+.skeletonCellNo {
+  width: 24px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.skeletonCellOrder {
+  width: 100px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.skeletonCellDate {
+  width: 90px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.skeletonCellAmount {
+  width: 70px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.skeletonCellStatus {
+  width: 80px;
+  height: 24px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.skeletonCellAction {
+  width: 50px;
+  height: 28px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .accountSidebar {
+    width: 320px;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .accountPageWrapper {
+    padding: 30px 0 60px 0;
+  }
+
+  .accountLayout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .accountSidebar {
+    width: 100%;
+    min-width: 100%;
+    position: static;
+  }
+
+  .mainContent {
+    width: 100%;
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formGrid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .accountPageWrapper {
+    padding: 20px 0 45px 0;
+  }
+
+  .accountContainer {
+    padding: 0 16px;
+  }
+
+  .sidebarCover {
+    height: 110px;
+  }
+
+  .sidebarAvatarWrapper {
+    width: 76px;
+    height: 76px;
+    margin: -38px auto 10px auto;
+  }
+
+  .sidebarAvatarInitial {
+    font-size: 28px;
+  }
+
+  .sidebarUserName {
+    font-size: 17px;
+  }
+
+  .sidebarUserEmail {
+    font-size: 12px;
+  }
+
+  .sidebarNavLink {
+    padding: 12px 16px;
+    font-size: 15px;
+    gap: 12px;
+  }
+
+  .sidebarLogoutArea {
+    padding: 12px 16px 18px 16px;
+  }
+
+  .sidebarLogoutBtn {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .mainContent {
+    padding: 18px 14px;
+    border-radius: 10px;
+  }
+
+  .sectionHeaderTitle {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+
+  .sectionSubtitle {
+    font-size: 13px;
+    margin: -4px 0 18px 12px;
+  }
+
+  .dashboardGreeting h4 {
+    font-size: 14px;
+  }
+
+  .dashboardGreetingDesc {
+    font-size: 13px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .statBox {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .statIconWrapper {
+    width: 46px;
+    height: 46px;
+  }
+
+  .statInfo h3 {
+    font-size: 22px;
+  }
+
+  .statInfo h4 {
+    font-size: 12px;
+  }
+
+  .dashInfoCard {
+    padding: 16px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .dashInfoCardTitle {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .infoRow {
+    gap: 6px 10px;
+  }
+
+  .infoLabel {
+    min-width: 80px;
+    font-size: 14px;
+  }
+
+  .infoValue {
+    font-size: 14px;
+  }
+
+  .formInput {
+    height: 46px;
+    font-size: 14px;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .saveInfoBtn {
+    max-width: 100%;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .ordersTable th {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .ordersTable td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .orderStatusBadge {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .viewOrderBtn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .orderDetailCard {
+    padding: 16px 14px;
+  }
+
+  .orderSummaryRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 8px;
+    padding: 12px 0;
+  }
+
+  .trackingTimeline {
+    padding: 16px 4px;
+  }
+
+  .trackingDot {
+    width: 34px;
+    height: 34px;
+  }
+
+  .trackingDot svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .trackingLine {
+    top: 17px;
+    left: calc(50% + 17px);
+    width: calc(100% - 34px);
+  }
+
+  .trackingLabel {
+    font-size: 11px;
+  }
+
+  .cancelOrderArea {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .cancelOrderBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .skeletonCover {
+    height: 110px;
+  }
+
+  .skeletonAvatar {
+    width: 76px;
+    height: 76px;
+    margin: -38px auto 10px auto;
+  }
+
+  .skeletonTableRow td {
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .accountContainer {
+    padding: 0 10px;
+  }
+
+  .accountLayout {
+    gap: 14px;
+  }
+
+  .mainContent {
+    padding: 16px 10px;
+  }
+
+  .sidebarCover {
+    height: 95px;
+  }
+
+  .sidebarAvatarWrapper {
+    width: 68px;
+    height: 68px;
+    margin: -34px auto 8px auto;
+  }
+
+  .sidebarAvatarInitial {
+    font-size: 24px;
+  }
+
+  .sidebarNavLink {
+    padding: 10px 12px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .statBox {
+    padding: 12px 14px;
+  }
+
+  .ordersTable th,
+  .ordersTable td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .trackingDot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .trackingDot svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .trackingLine {
+    top: 15px;
+    left: calc(50% + 15px);
+    width: calc(100% - 30px);
+  }
+
+  .trackingLabel {
+    font-size: 10px;
+  }
+}

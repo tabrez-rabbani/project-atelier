@@ -1,0 +1,43 @@
+.beautyBanner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #d1b89d;
+  line-height: 0;
+}
+
+.beautyBanner__link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.beautyBanner__imageWrapper {
+  width: 100%;
+  aspect-ratio: 1680 / 936;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.beautyBanner__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  transition: opacity var(--transition-fast, 0.2s ease);
+}
+
+@media (hover: hover) {
+  .beautyBanner__link:hover .beautyBanner__image {
+    opacity: 0.96;
+  }
+}
+
+@media (max-width: 767px) {
+  .beautyBanner {
+    display: none !important;
+  }
+}

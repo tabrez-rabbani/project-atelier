@@ -1,0 +1,389 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard__statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.dashboard__statCard {
+  background-color: #26292f;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  height: 94px;
+  transition: 0.3s ease-in-out;
+}
+
+.dashboard__statCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 20px #999;
+}
+
+.dashboard__statBorder {
+  width: 4px;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 0 4px 4px 0;
+}
+
+.dashboard__borderBlue {
+  background-color: #02a9f7;
+}
+
+.dashboard__borderRed {
+  background-color: #ef4444;
+}
+
+.dashboard__borderGold {
+  background-color: #eab308;
+}
+
+.dashboard__borderPurple {
+  background-color: #a855f7;
+}
+
+.dashboard__statContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.dashboard__statLabel {
+  font-size: 14px;
+  color: #a0a5b1;
+  margin: 0 0 6px 0;
+  font-weight: 500;
+}
+
+.dashboard__statValueWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard__statValue {
+  font-size: 26px;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.dashboard__addNewLink {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.dashboard__addNewLink:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.dashboard__statIconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashboard__iconBlue {
+  color: #02a9f7;
+}
+
+.dashboard__iconRed {
+  color: #ef4444;
+}
+
+.dashboard__iconGold {
+  color: #eab308;
+}
+
+.dashboard__iconPurple {
+  color: #a855f7;
+}
+
+.dashboard__showcaseGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.dashboard__sectionCard {
+  background-color: #262932;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard__sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+}
+
+.dashboard__sectionTitle {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+  display: inline-block;
+}
+
+.dashboard__sectionSubtitle {
+  font-size: 12px;
+  color: #8e93a0;
+  text-align: center;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.3px;
+}
+
+.dashboard__actionBtn {
+  background: none;
+  border: none;
+  color: #a0a5b1;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dashboard__actionBtn:hover {
+  color: #02a9f7;
+}
+
+.dashboard__chartBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 240px;
+  padding: 10px 0;
+}
+
+.dashboard__chartBarsWrapper {
+  width: 100%;
+  height: 180px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: flex-end;
+}
+
+.dashboard__chartSvg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.dashboard__barRect {
+  fill: #02a9f7;
+  cursor: pointer;
+  transition: fill 0.2s, opacity 0.2s;
+}
+
+.dashboard__barRect:hover {
+  fill: #38bdf8;
+  opacity: 0.9;
+}
+
+.dashboard__chartLabelsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 8px 0 8px;
+}
+
+.dashboard__chartMonthLabel {
+  font-size: 11px;
+  color: #8e93a0;
+  text-align: center;
+  font-weight: 500;
+  flex: 1;
+}
+
+.dashboard__chartEmptyNote {
+  text-align: center;
+  font-size: 13px;
+  color: #717786;
+  margin-top: 14px;
+}
+
+.dashboard__listContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dashboard__listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dashboard__listItem:last-child {
+  border-bottom: none;
+}
+
+.dashboard__itemThumbnail {
+  height: 68px;
+  border-radius: 5px;
+  object-fit: contain;
+  background-color: #1a1c21;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dashboard__infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dashboard__titleCol {
+  flex: 1.4;
+}
+
+.dashboard__itemTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.dashboard__itemDate {
+  font-size: 12px;
+  color: #8e93a0;
+  margin: 0;
+}
+
+.dashboard__fieldLabel {
+  font-size: 12px;
+  color: #8e93a0;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dashboard__fieldValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.dashboard__statusInStock,
+.dashboard__statusPaid,
+.dashboard__statusDelivered {
+  color: #22c55e !important;
+  font-weight: 600;
+}
+
+.dashboard__statusOutOfStock,
+.dashboard__statusUnpaid,
+.dashboard__statusCancelled {
+  color: #ef4444 !important;
+  font-weight: 600;
+}
+
+.dashboard__statusPending,
+.dashboard__statusProcessing {
+  color: rgb(255, 85, 0) !important;
+  font-weight: 600;
+}
+
+.dashboard__statusShipped {
+  color: #02a9f7 !important;
+  font-weight: 600;
+}
+
+.dashboard__statusPlaced {
+  color: #38bdf8 !important;
+  font-weight: 600;
+}
+
+.dashboard__emptyState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8e93a0;
+  font-size: 14px;
+  min-height: 200px;
+  text-align: center;
+  gap: 8px;
+}
+
+.dashboard__spinner {
+  color: #02a9f7;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1100px) {
+  .dashboard__showcaseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard__listItem {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .dashboard__itemThumbnail {
+    width: 52px;
+    height: 52px;
+  }
+
+  .dashboard__infoCol {
+    min-width: 80px;
+  }
+
+  .dashboard__chartMonthLabel {
+    font-size: 9px;
+  }
+}

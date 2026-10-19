@@ -1,0 +1,158 @@
+.navbar {
+  height: 80px;
+  background-color: #1e2126; /* Dark top bar color matching screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.navbar__toggleBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar__toggleBtn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  position: relative;
+}
+
+.hamburgerLine {
+  display: block;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              width 0.3s ease;
+}
+
+.hamburgerLine:nth-child(1) { width: 22px; }
+.hamburgerLine:nth-child(2) { width: 16px; }
+.hamburgerLine:nth-child(3) { width: 10px; }
+
+.navbar__search {
+  flex: 1;
+}
+
+.navbar__searchWrapper {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  height: 40px;
+}
+
+.navbar__searchInput {
+  flex: 1;
+  height: 100%;
+  background-color: #141619; /* Darker input background */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  padding: 0 16px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+}
+
+.navbar__searchInput::placeholder {
+  color: #888;
+}
+
+.navbar__searchBtn {
+  width: 48px;
+  height: 100%;
+  background-color: #f39c12; /* Yellow/Orange button */
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.navbar__searchBtn:hover {
+  opacity: 0.9;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar__iconBtn {
+  background: none;
+  border: none;
+  color: #a0a5b1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.navbar__iconBtn:hover {
+  color: white;
+}
+
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.navbar__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #26292f;
+  color: #a0a5b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__userName {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar__userRole {
+  font-size: 12px;
+  color: #a0a5b1;
+}

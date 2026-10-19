@@ -1,0 +1,237 @@
+.page {
+  min-height: calc(100vh - var(--header-height));
+  padding-top: 32px;
+  padding-bottom: 60px;
+  background-color: var(--background);
+}
+
+.inner {
+  max-width: 1280px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.backBtn:hover {
+  color: var(--primary);
+  background-color: var(--surface-soft, #f7f5f0);
+}
+
+.searchBar {
+  flex: 1;
+  position: relative;
+  max-width: 560px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.searchInput {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 13px 44px 13px 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 8px);
+  background-color: var(--white);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(177, 74, 26, 0.08);
+}
+
+.clearBtn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.clearBtn:hover {
+  color: var(--text-primary);
+}
+
+.info {
+  margin-bottom: 24px;
+}
+
+.infoText {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.pageBtn {
+  padding: 10px 24px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.emptyIcon {
+  color: var(--border);
+  margin-bottom: 20px;
+}
+
+.emptyTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.emptyDesc {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 320px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.emptyCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white, #ffffff);
+  background-color: var(--primary);
+  border-radius: var(--radius-sm, 8px);
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.emptyCta:hover,
+.emptyCta:focus,
+.emptyCta:active {
+  color: var(--white, #ffffff);
+  background-color: var(--primary-dark, #9a3d10);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .header {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .searchInput {
+    font-size: 15px;
+    padding: 11px 40px 11px 44px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .pagination {
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .pageBtn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}

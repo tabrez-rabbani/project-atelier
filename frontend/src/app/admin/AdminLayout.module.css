@@ -1,0 +1,87 @@
+/* This will apply a global dark theme specifically for the admin panel */
+.adminLayout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #141619; /* Very dark background for main content area */
+  color: #e5e7eb;
+  font-family: var(--font-admin), "Public Sans", sans-serif;
+}
+
+.adminLayout h1,
+.adminLayout h2,
+.adminLayout h3,
+.adminLayout h4,
+.adminLayout h5,
+.adminLayout h6,
+.adminLayout input,
+.adminLayout select,
+.adminLayout textarea,
+.adminLayout button {
+  font-family: var(--font-admin), "Public Sans", sans-serif;
+}
+
+.adminMain {
+  flex: 1;
+  margin-left: 300px; /* Width of the sidebar */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.adminMainExpanded {
+  margin-left: 0 !important;
+}
+
+.sidebarOverlay {
+  display: none !important;
+}
+
+.sidebarOverlayVisible {
+  display: none !important;
+}
+
+.adminContent {
+  flex: 1;
+  padding: 24px;
+  background-color: #1a1c21; /* Slightly lighter background for the content area, matching screenshot */
+}
+
+@media (max-width: 768px) {
+  .adminMain {
+    margin-left: 0 !important;
+  }
+
+  .sidebarOverlay {
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 990;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .sidebarOverlayVisible {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* Scrollbar for admin panel */
+.adminLayout *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.adminLayout *::-webkit-scrollbar-track {
+  background: #141619;
+}
+
+.adminLayout *::-webkit-scrollbar-thumb {
+  background-color: #26292f;
+  border-radius: 4px;
+}

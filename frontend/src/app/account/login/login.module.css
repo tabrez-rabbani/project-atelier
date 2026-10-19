@@ -1,0 +1,257 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+  padding: 32px 24px;
+  background-color: var(--background);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 600px;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+}
+
+.brandPanel {
+  position: relative;
+  background: #f0ede8;
+  overflow: hidden;
+}
+
+.brandPanel__image {
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.formPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 56px;
+}
+
+.formPanel__title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.errorMessage {
+  color: #c0392b;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.field {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 16px 8px 0;
+  font-size: 16px;
+  color: var(--text-primary);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus {
+  border-bottom-color: var(--primary);
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  font-size: 16px;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  top: 0;
+  font-size: 11px;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+.eyeBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  transition: color var(--transition-fast);
+}
+
+.eyeBtn:hover {
+  color: var(--text-primary);
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px 40px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider span {
+  padding: 0 16px;
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.googleBtn:hover:not(:disabled) {
+  background: var(--surface-soft);
+  border-color: var(--text-muted);
+}
+
+.googleBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background: var(--surface-soft);
+}
+
+.googleSpinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-top-color: var(--text-primary);
+  border-radius: 50%;
+  animation: googleSpin 0.7s linear infinite;
+}
+
+@keyframes googleSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.switchText {
+  margin: 32px 0 0 0;
+  font-size: 15px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.switchLink {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.switchLink:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .card {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+  .brandPanel {
+    padding: 40px 32px;
+    min-height: 200px;
+  }
+  .formPanel {
+    padding: 32px 24px;
+  }
+  .formPanel__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  .formRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .submitBtn {
+    width: 100%;
+  }
+}
+
+.suspenseFallback {
+  min-height: 80vh;
+}

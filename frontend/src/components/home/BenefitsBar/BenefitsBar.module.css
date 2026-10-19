@@ -1,0 +1,135 @@
+.benefits {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+  overflow: hidden;
+}
+
+.benefits__container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.benefits__track {
+  display: flex;
+  align-items: center;
+}
+
+.benefits__group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.benefits__groupClone {
+  display: none;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.benefit__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.benefit__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.benefit__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.benefit__description {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (max-width: 1023px) {
+  .benefits__container {
+    padding: 0 var(--space-lg);
+  }
+  
+  .benefit {
+    gap: 12px;
+  }
+  
+  .benefit__title {
+    font-size: 12px;
+  }
+  
+  .benefit__description {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefits {
+    padding: 22px 0;
+  }
+
+  .benefits__container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .benefits__track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: scroll 22s linear infinite;
+  }
+
+  .benefits__track:hover {
+    animation-play-state: paused;
+  }
+
+  .benefits__group,
+  .benefits__groupClone {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding-right: 36px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .benefit {
+    width: max-content;
+    gap: 12px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefits__track {
+    animation: none;
+  }
+}

@@ -1,0 +1,10 @@
+.authChecking {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #16171f;
+  color: #94a3b8;
+  font-size: 14px;
+  font-family: var(--font-admin, sans-serif);
+}
