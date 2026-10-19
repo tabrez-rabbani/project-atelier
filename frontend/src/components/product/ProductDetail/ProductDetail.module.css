@@ -39,20 +39,17 @@
   border: 2px solid transparent;
   cursor: pointer;
   padding: 0;
-  transition: border-color var(--transition-fast), opacity 0.2s ease;
+  transition: border-color var(--transition-fast);
   touch-action: manipulation;
   z-index: 2;
-  opacity: 0.65;
 }
 
 .gallery__thumb:hover {
-  opacity: 1;
   border-color: var(--text-muted);
 }
 
 .gallery__thumb--active {
   border-color: var(--text-primary);
-  opacity: 1;
 }
 
 .gallery__thumbImage {
