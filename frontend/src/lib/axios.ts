@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api").replace(/\/+$/, "");
-
+// Handles authentication API requests and retries failed requests
+// after refreshing the session when the server returns a 401 error.
 const authApiInstance = axios.create({
   baseURL: API_URL,
   withCredentials: true,
