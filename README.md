@@ -386,6 +386,16 @@ All backend routes are prefixed with `/api`.
 
 ---
 
+---
+
+## Troubleshooting
+
+- **MongoDB connection fails:** Check that `MONGO_URI` is correct and your IP address is allowed in MongoDB Atlas Network Access.
+- **Environment variables are missing:** Make sure the backend `.env` and frontend `.env.local` files exist and contain the required values.
+- **Frontend cannot reach the API:** Verify that `NEXT_PUBLIC_API_URL` points to the running backend API.
+- **Port is already in use:** Stop the process using the port or configure the application to use another available port.
+- **Changes to environment variables are not applied:** Restart the affected development server after updating the environment file.
+
 ## License
 
 This project is licensed under the ISC License.
