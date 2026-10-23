@@ -210,6 +210,7 @@ project-atelier/
 - ImageKit account (for media storage)
 - Razorpay account (for payment processing)
 - Google Cloud Console OAuth 2.0 credentials
+- > **Note:** The frontend and backend are configured separately. Complete the environment setup for both services before starting the application.
 
 ---
 
